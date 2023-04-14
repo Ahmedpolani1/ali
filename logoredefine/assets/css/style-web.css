@@ -28,6 +28,10 @@ img{
     margin-left: -585px !important;
 }
 
+.HideClass{
+    display: none !important;
+}
+
 
 
 section.detail-pkg-content {
@@ -185,6 +189,7 @@ header ul li:last-child{
 header .main-menu{
     margin-top: 10px;
     margin-left: -40px;
+    box-shadow: none !important;
 }
 header .logo{
     max-width: 100%;
@@ -705,7 +710,19 @@ font-weight: 600 !important;
 .tCenter{
     text-align: center;
 }
-a.btn.orderBtn {
+button.btn.ShowMoreBtn {
+    background: linear-gradient(90deg, rgba(96,210,240,1) 7%, rgb(92, 224, 183) 100%);
+    border-radius: 20px;
+    color: white;
+    margin: 25px auto 0;
+    padding: 9px 35px;
+    font-weight: 600;
+    font-size: 17px;
+    text-transform: uppercase;
+    line-height: 39px;
+
+}
+button.btn.OrderNowBtn {
     background: linear-gradient(90deg, rgba(96,210,240,1) 7%, rgb(92, 224, 183) 100%);
     border-radius: 20px;
     color: white;
@@ -857,10 +874,10 @@ button#showMore{
     font-size: 18px;
     color: #303030;
     display: inline-block;
-    float: left;
     margin: 0;
     position: relative;
     line-height: 24px;
+    font-weight: 600;
 }
 .pack .head img{
     float: right;
@@ -1867,101 +1884,6 @@ section.expert .container{
 .contact-form .form-control:focus{
     border-bottom: 1px solid #000 !important;
 }
-.popupform{
-    background: rgb(96,210,240);
-    background: linear-gradient(90deg, rgba(96,210,240,1) 7%, rgba(92,224,183,1) 100%);
-    padding: 15px 15px 15px 15px;
-    width: 1100px;
-    border-radius: 14px;
-    height: 435px;
-    position: relative;
-}
-.popupform .custom-form{
-    background: white;
-    padding: 0;
-    height: 100%;
-    overflow: hidden;
-}
-.popupform .custom-form h2{
-    font-size: 24px;
-    font-weight: 700;
-    display: block;
-    margin: 0;
-}
-.popupform .custom-form h3{
-    font-size: 70px;
-    color: #cb2702;
-    font-weight: 700;
-    display: inline-block;
-    margin: 0;
-    position: relative;
-}
-.popupform .custom-form h2 span{
-    font-size: 21px;
-    font-weight: 400;
-    margin-top: 3px;
-}
-.popupform .custom-form h3 sup{
-    left: 10px;
-    font-size: 38px;
-    top: -31px;
-}
-.popupform .custom-form .form-control{
-    margin-bottom: 8px;
-    border: 1px solid #d9d6d9;
-    background: #f0f0f0;
-    height: 44px;
-    font-size: 13px;
-    font-weight: 300;
-    border-radius: 4px;
-}
-.popupform .custom-form .margin{
-    margin: 20px 60px 0px -60px;
-    height: 100%;
-    position: relative;
-}
-.popupform .custom-form textarea.form-control{
-    resize: none;
-    height: 148px;
-}
-.popupform .custom-form .col-md-6{
-    padding: 0 5px;
-}
-.popupform .custom-form input.btn-custom{
-    border: none;
-    color: white;
-    background: rgb(140,187,77);
-    background: linear-gradient(90deg, rgba(140,187,77,1) 0%, rgba(14,145,127,1) 100%);
-    padding: 14px 60px;
-    font-size: 15px;
-    text-transform: uppercase;
-    border-radius: 40px 0 0 40px;
-    position: absolute;
-    right: -35px;
-    bottom: -90px;
-}
-.popupform .custom-form img{
-    max-width: 95%;
-    margin-left: 10px;
-}
-.popupform .custom-form .form_tagline{
-    margin: 0;
-    font-size: 11px;
-    margin-left: -9px;
-}
-.popupform .custom-form .form_tagline input{
-    vertical-align: middle;
-    margin-right: 5px;
-}
-.popupform button.fancybox-button{
-    background: #ffce2f;
-    opacity: 1;
-    color: black !important;
-    padding: 4px !important;
-    height: 30px;
-    width: 50px;
-    border-radius: 0 0 0 20px;
-}
 .forOfor h2{
     color: #404040;
     font-weight: 700;
@@ -2473,23 +2395,7 @@ label.error {
 
 h2.pp-title::last-word{color:red;}
 
-/* h2.pp-title {} */
 
-.popupform .custom-form h2 span {
-    font-size: 33px;
-    color: #cb2702;
-    font-weight: 700;
-    display: inline-block;
-    margin: 0;
-    margin-left: 0px;
-    position: relative;
-    top: -2px;
-}
-
-/* .popupform .custom-form p {
-    float: left;
-}
- */
 
 
 
@@ -2614,3 +2520,53 @@ section.our-banner.inner-banner.combo-banner.text-center.pkg-detail-banner .capt
     top: -1px;
     max-width: 30px;
 }
+
+
+/* MODAL CSS */
+#exampleModalCenter{
+    z-index: 9999;
+}
+.modal-content{
+    background: linear-gradient(45deg, #09dfb9 0%, #8d60b4 100%);
+    padding: 22px;
+}
+.modal-content .signup-form .form-group button.rounded{
+    background: #000;
+    color: #fff;
+font-weight: 600;
+font-size: 19px;
+}
+input.form-control {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #fff;
+}
+.form-group textarea {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #fff;
+}
+.form-group textarea:focus {
+    transform: scale(1.06);
+    border: none;
+    box-shadow: none;
+    background-color: #fff;
+}
+.form-control:focus {
+    transform: scale(1.06);
+    border: none;
+    box-shadow: none;
+  }
+  .modal-header {
+    display: block !important;
+    padding: 0 !important;
+    border: none !important;
+  }  
+  .modalhead {
+    border-bottom-left-radius: 81px;
+    border-bottom-right-radius: 81px;
+    background: #000;
+    color: #fff;text-align: center;
+padding: 12px;
+  }
+/* MODAL CSS */
